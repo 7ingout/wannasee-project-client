@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increase, decrease } from '../modules/counter';
+import { increase, decrease, reset } from '../modules/counter';
 import Counter from './Counter';
 
 
-const CounterContainer = ( {Detailconcert} ) => {
+const CounterContainer = (  ) => {
     // useSelector는 리덕스 스토어의 상태를 조회하는 Hook함수
     // store.getState()할 때 결과와 동일함
     const { number } = useSelector(state => (state.counter));
@@ -16,8 +16,8 @@ const CounterContainer = ( {Detailconcert} ) => {
     const onIncrease = () => dispatch(increase());
     const onDecrease = () => dispatch(decrease());
     // props.getNumber(number);
-//    getNumber(number);
-    Detailconcert(number);
+    // getNumber(number);
+    // Detailconcert(number);
     return (
         <div>
             <Counter 

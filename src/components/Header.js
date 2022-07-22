@@ -28,7 +28,7 @@ const Header = () => {
                     <h1><Link to ='/'>WANNASEE?</Link></h1>
                     <ul>
                         {idid === 'admin' ? <li><Link to="/insert">insert</Link></li> : ''} 
-                        {idid === null ? <li><Link to="/login">login</Link></li> : <><li> Welcome {idid} 💙</li><li id="pointer" onClick={()=>{goHome(); Logout();}}>logout</li></>} 
+                        {idid === null ? <li><Link to="/login">login</Link></li> : <><li> Welcome {idid} 🎈</li><li id="pointer" onClick={()=>{goHome(); Logout();}}>logout</li></>} 
                         {idid === null ? <li><Link to="/join">join</Link></li> : ''}    
                         {idid === null ? '' :  <li><Link to={`/mypage/${idid}`}>mypage</Link></li>} 
                     </ul>

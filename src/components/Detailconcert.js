@@ -1,11 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import useAsync from '../customHook/useAsync';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { API_URL } from '../config/contansts';
 import './Detailconcert.css';
 import CounterContainer from './CounterContainer';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch  } from 'react-redux'
+import {  reset } from '../modules/counter';
 
 async function getConcerts(id){
     const response = await axios.get(`${API_URL}/detailview/${id}`);
@@ -13,7 +14,10 @@ async function getConcerts(id){
 }  
 
 const Detailconcert = () => {
-    let { number } = useSelector(state => (state.counter));
+    const dispatch = useDispatch();
+    const onReset = () => dispatch(reset());
+    const { number } = useSelector(state => (state.counter));
+    console.log(number);
     const { id } = useParams();
     const navigate = useNavigate();
     const idid = sessionStorage.getItem('loginId');
@@ -29,6 +33,7 @@ const Detailconcert = () => {
 
     const [ state ] = useAsync(()=>getConcerts(id),[id]);
     const { loading, data:concert, error } = state;
+
     useEffect(()=>{
         setGoData({
             c_user_id: idid,
@@ -39,11 +44,12 @@ const Detailconcert = () => {
             c_user_start: concert? concert.start_time : "",
             c_user_num: number
         })
-    },[concert,number])
-
+    },[concert, number])
+    useEffect(()=> {
+        onReset();
+    },[])
     function addReserve(){
-
-        axios.post(`${API_URL}/addReservation`,goData)
+        axios.put(`${API_URL}/addReservation`, goData)
         .then((result)=>{
             // console.log(result);
             window.location.replace(`/mypage/${idid}`)
@@ -72,14 +78,6 @@ const Detailconcert = () => {
 
     }
 
-    function dd() {
-        console.log(number);
-        number = 0;
-        console.log(number);
-        window.location.replace("/")
-    }
-    
-
     if(loading)  return <div className="spinner_bg"><div className="spinner"><div className="cube1"></div><div className="cube2"></div></div></div>
     if(error) return <div>에러가 발생했습니다.</div>
     if(!concert) return null;
@@ -88,15 +86,15 @@ const Detailconcert = () => {
 
             <div id="detail_concert">
                 <div id='btns'>
-                    <button><Link to={`/editConcert/${id}`}>수정</Link></button>
-                    <button onClick={onDelete}>삭제</button>
+                {idid === 'admin' ?  <button><Link to={`/editConcert/${id}`}>수정</Link></button> : ''} 
+                {idid === 'admin' ?  <button onClick={onDelete}>삭제</button> : ''} 
                 </div>
                 <div id="left_detail">
                     
                     <div id="detail_img"><img src={`../${concert.imgsrc}`} alt="singer_pic" /></div>
                 </div>
                 <div id="right_detail">
-                    <span onClick={dd} id="span_title">{concert.title}</span>
+                    <span id="span_title">{concert.title}</span>
                     <div id="div_singer">{concert.singer}</div>
                     <div id="div_genre">{concert.genre}</div>
                     <span id="span_locaion">{concert.location}</span>
@@ -104,7 +102,7 @@ const Detailconcert = () => {
                     <div id="div_date">{concert.concertdate} / ₩{concert.price}</div>
                     <div>🕒 공연 시간 {concert.start_time}시부터 {concert.end_time}시까지</div>
                     <div id="gopurchace">
-                        <CounterContainer Detailconcert={Detailconcert}/>
+                        <CounterContainer />
                         <Link to={`/mypage/${idid}`}><div id="outerpur"><button id="purchace" onClick={addReserve}>티켓 예매하기</button></div></Link>
                     </div>
                 </div>
