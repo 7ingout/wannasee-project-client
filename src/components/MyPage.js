@@ -11,10 +11,6 @@ const MyPage = () => {
         const response = await axios.get(`${API_URL}/mypage/${idid}`);
         return response.data;
     }  
-    // const { savedLoginId, setSavedLoginId } = useResultContext('');
-    // const { savedLoginPassword, setSavedLoginPassword } = useResultContext('');  
-    // idid = sessionStorage.getItem('loginId');
-    // console.log(idid);
     const { idid } = useParams();
     const [ state ] = useAsync(()=>getOrder(idid),[idid]);
     const { loading, data: datas, error } = state;

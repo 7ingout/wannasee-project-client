@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'
-import { useResultContext } from '../Contexts/context';
+// import { useResultContext } from '../Contexts/context';
 import './Header.css';
-import { API_URL } from '../config/contansts';
-// import useAsync from '../customHook/useAsync';
-import axios from 'axios';
 
 const Header = () => {
     function go_up() {
@@ -40,9 +37,6 @@ const Header = () => {
                     <li id="region"><Link to ='/region'>#지역별</Link></li>
                     <li id="period"><Link to ='/period'>#기간별</Link></li>
                 </ul>
-                {/* <ul>
-                    <li id="welcome"><Link to ='/'>Welcome</Link></li>
-                </ul> */}
             </nav>
             <div id="Arrimg" onClick={go_up}><img src='/arrow.png' alt="arrow_pic" /></div>
         </div>

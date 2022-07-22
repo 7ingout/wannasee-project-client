@@ -62,7 +62,7 @@ const Createconcert = () => {
                 alert("모든 기입란에 기입해주세요");
             }
         }else{
-            alert("등록이 취소되었습니다");
+            alert("등록이 취소되었습니다.");
         }
     }
     function insertConcert(){
@@ -94,7 +94,7 @@ const Createconcert = () => {
                         <tr>
                             <td>이미지등록</td>
                             <td id='imgimgimg'>
-                                <img id='disdis' src={`../${formData.c_imgsrc}`}/>
+                                <img id='disdis' src={`../${formData.c_imgsrc}`} alt='imgimg'/>
                                 <input onClick={imgopen} name="c_imgsrc" type="file" onChange={onChangeImg}/>
                             </td>
                         </tr>

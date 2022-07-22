@@ -101,12 +101,7 @@ const Editconcert = () => {
         })
     }
     const imgname = formData.c_imgsrc.split('/')[1];
-    function imgfake() {
-        // let fake = document.querySelector('#fake');
-        // let real = document.querySelector('#real');
-        // console.log(real)
-        // real.style.opacity = '1';
-    }
+
     if(loading) return <div className="spinner_bg"><div className="spinner"><div className="cube1"></div><div className="cube2"></div></div></div>
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>
     if(!concert) return null;
@@ -121,12 +116,11 @@ const Editconcert = () => {
                                 👀 공연 정보 수정하기
                             </th>
                         </tr>
-                        {/* <input name="c_imgsrc" type="file" value={formData.c_imgsrc} onChange={onChange}/> */}
                         <tr>
                             <td>이미지등록</td>
                             <td id='imgimgimg'>
-                                <img src={`../${formData.c_imgsrc}`}/>
-                                <p id="fff" onClick={imgfake}>    
+                                <img src={`../${formData.c_imgsrc}`} alt="imgimg"/>
+                                <p id="fff">    
                                     <span id='fakebox'>파일 선택 </span> 
                                     <span id='fake'>{imgname}</span>
                                     <input id='real' name="c_imgsrc" type="file" onChange={onChangeImg}/>
@@ -179,8 +173,7 @@ const Editconcert = () => {
                         <tr>
                             <td>지역2</td>
                             <td>
-                                <input name="c_rank_location" type="text" value={formData.c_rank_location} onChange={onChange}/>
-                                {/* // placeholder="서울:1 / 부산:2 / 대구:3 / 인천:4 / 광주:5 / 대전:6 / 울산:7 / 기타:8 "/> */}
+                                <input placeholder="서울:1 / 부산:2 / 대구:3 / 인천:4 / 광주:5 / 대전:6 / 울산:7 / 기타:8 " name="c_rank_location" type="text" value={formData.c_rank_location} onChange={onChange}/>
                             </td>
                         </tr>
                         <tr>

@@ -32,15 +32,11 @@ export default function counter(state=initialState, action){
         case DECREASE:
             return {
                 ...state,
-<<<<<<< HEAD
-                number: state.number>1 ? state.number - 1 : 1
-=======
                 number: state.number > 1 ? state.number - 1 : 1
             }
         case RESET:
             return {
                 number: 1
->>>>>>> 2b52a0fc690defa92c468c58967459c2122dd829
             }
         default:
             return state;

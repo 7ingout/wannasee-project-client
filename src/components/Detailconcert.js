@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import axios from 'axios';
 import useAsync from '../customHook/useAsync';
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -48,15 +48,22 @@ const Detailconcert = () => {
     useEffect(()=> {
         onReset();
     },[])
+
     function addReserve(){
-        axios.put(`${API_URL}/addReservation`, goData)
-        .then((result)=>{
-            // console.log(result);
-            window.location.replace(`/mypage/${idid}`)
-        })
-        .catch(e=>{
-            // console.log(e);
-        })
+        if(window.confirm("예매하시겠습니까?") && idid){
+            axios.put(`${API_URL}/addReservation`, goData)
+            .then((result)=>{
+                console.log(result);
+            })
+            .catch(e=>{
+                console.log(e);
+            })
+            navigate(`/mypage/${idid}`);
+        } 
+         else {
+            if(idid) alert("예매가 취소되었습니다.");
+            else alert('로그인 후 이용바랍니다.')
+        }
     }
     // if(window.history.back() == true){
     //     window.location.reload();
@@ -103,7 +110,7 @@ const Detailconcert = () => {
                     <div>🕒 공연 시간 {concert.start_time}시부터 {concert.end_time}시까지</div>
                     <div id="gopurchace">
                         <CounterContainer />
-                        <Link to={`/mypage/${idid}`}><div id="outerpur"><button id="purchace" onClick={addReserve}>티켓 예매하기</button></div></Link>
+                        <div id="outerpur"><button id="purchace" onClick={addReserve}>티켓 예매하기</button></div>
                     </div>
                 </div>
             </div>

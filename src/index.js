@@ -13,21 +13,11 @@ const store = createStore(rootReducer);
 console.log(store.getState());
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<<<<<<< HEAD
-
-  <React.StrictMode>
-=======
->>>>>>> 2b52a0fc690defa92c468c58967459c2122dd829
       <BrowserRouter>
         <Provider store={store}>
           <App />
         </Provider>
       </BrowserRouter>
-<<<<<<< HEAD
-  </React.StrictMode>
-
-=======
->>>>>>> 2b52a0fc690defa92c468c58967459c2122dd829
 );
 
 // If you want to start measuring performance in your app, pass a function

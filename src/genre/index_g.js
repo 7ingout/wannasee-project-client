@@ -23,11 +23,11 @@ const ConcertGenre = () => {
             <div className="pageinner">
                 <div id="all_div">
                     <ul id="all_ul">
-                        <Link to='/genre'><li>전체보기</li></Link>
-                        <Link to="/genre/발라드"><li>발라드</li></Link>
-                        <Link to="/genre/트로트"><li>트로트</li></Link>
-                        <Link to="/genre/락메탈" ><li>락/메탈</li></Link>
-                        <Link to="/genre/힙합"><li>힙합</li></Link>
+                        <li><Link to='/genre'>전체보기</Link></li>
+                        <li><Link to="/genre/발라드">발라드</Link></li>
+                        <li><Link to="/genre/트로트">트로트</Link></li>
+                        <li><Link to="/genre/락메탈" >락/메탈</Link></li>
+                        <li><Link to="/genre/힙합">힙합</Link></li>
                     </ul>
                 </div>
                 <ul className='component'>
