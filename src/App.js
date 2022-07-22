@@ -15,9 +15,11 @@ import ConcertRegion from './region/index_r';
 import ConcertWeekend from './period/index_w';
 import MemberJoin from './components/MemberJoin';
 import MyPage from './components/MyPage';
+import { ResultContextProvider } from './Contexts/context';
 
 function App() {
   return (
+    // <ResultContextProvider>
     <div className="App">
       <Header/>
       <Routes>
@@ -37,6 +39,7 @@ function App() {
       </Routes>
       <Footer/>
     </div>
+    // </ResultContextProvider>
   );
 }
 

@@ -14,6 +14,7 @@ export const MemberLogin = () => {
     // const { savedLoginPassword, setSavedLoginPassword } = useResultContext("")
     let [savedLoginId, setSavedLoginId] = useState("");
     let [savedLoginPassword, setSavedLoginPassword] = useState("");
+    console.log(savedLoginId);
     const Login = async () => {
         let userId = document.querySelector('#userID');
         let userPw = document.querySelector('#userPW');

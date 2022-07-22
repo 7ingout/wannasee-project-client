@@ -11,10 +11,7 @@ const Header = () => {
         window.scrollTo(0,0);
     }
     const Navigate = useNavigate();
-    // const { savedLoginId, setSavedLoginId } = useResultContext('');
-    // const { savedLoginPassword, setSavedLoginPassword } = useResultContext('');  
-    // console.log(savedLoginId);
-    console.log(sessionStorage)
+    // console.log(sessionStorage)
     const idid = sessionStorage.getItem('loginId');
     function goHome() {
         Navigate('/');

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import useAsync from '../customHook/useAsync';
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -7,12 +7,18 @@ import './Detailconcert.css';
 import CounterContainer from './CounterContainer';
 
 const Detailconcert = () => {
+
+    // console.log(CounterContainer.value);
+    // console.log(number);
+    // console.log(counter)
+
+
     const { id } = useParams();
     const navigate = useNavigate();
     const [ state ] = useAsync(()=>getConcerts(id),[id]);
     const { loading, data:concert, error } = state;
     const idid = sessionStorage.getItem('loginId');
-    console.log('haha'+idid);
+    
     // const [number, setNumber ] =useState(0)
     // const getNumber = (number) => {
     //     setNumber(number);
@@ -65,6 +71,9 @@ const Detailconcert = () => {
 
     }
 
+    let per = document.querySelector("#purchace");
+    // console.log(per)
+
     if(loading)  return <div className="spinner_bg"><div className="spinner"><div className="cube1"></div><div className="cube2"></div></div></div>
     if(error) return <div>에러가 발생했습니다.</div>
     if(!concert) return null;
@@ -89,7 +98,7 @@ const Detailconcert = () => {
                     <div id="div_date">{concert.concertdate} / ₩{concert.price}</div>
                     <div>🕒 공연 시간 {concert.start_time}시부터 {concert.end_time}시까지</div>
                     <div id="gopurchace">
-                        <CounterContainer/>
+                        <CounterContainer per={per}/>
                         <Link to={`/mypage/${idid}`}><div id="outerpur"><button id="purchace" onClick={addReserve}>티켓 예매하기</button></div></Link>
                     </div>
                 </div>
