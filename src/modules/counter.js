@@ -6,7 +6,7 @@
 
 // 1. 초기상태선언
 const initialState = {
-    number: 0,
+    number: 1,
 }
 
 // 2. 액션타입
@@ -30,7 +30,7 @@ export default function counter(state=initialState, action){
         case DECREASE:
             return {
                 ...state,
-                number: state.number - 1
+                number: state.number>1 ? state.number - 1 : 1
             }
         default:
             return state;

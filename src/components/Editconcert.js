@@ -44,6 +44,7 @@ const Editconcert = () => {
             c_description: concert? concert.description : "",
         })
     },[concert])
+
     console.log(formData.c_imgsrc);
     const onChange = (e) => {
         const { name, value } = e.target;
@@ -109,6 +110,7 @@ const Editconcert = () => {
     if(loading) return <div className="spinner_bg"><div className="spinner"><div className="cube1"></div><div className="cube2"></div></div></div>
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>
     if(!concert) return null;
+
     return (
         <div className="ce_concert">
             <form onSubmit={onSubmit}> 
