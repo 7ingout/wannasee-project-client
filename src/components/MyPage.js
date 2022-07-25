@@ -11,6 +11,7 @@ const MyPage = () => {
         const response = await axios.get(`${API_URL}/mypage/${idid}`);
         return response.data;
     }  
+
     const { idid } = useParams();
     const [ state ] = useAsync(()=>getOrder(idid),[idid]);
     const { loading, data: datas, error } = state;
