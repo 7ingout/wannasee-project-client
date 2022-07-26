@@ -113,3 +113,8 @@ nav #welcome {
 #pointer {
     cursor: pointer;
 }
+@media screen and (max-width: 480px) {
+    #top_header {
+        display: none;
+    }
+}

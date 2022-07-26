@@ -1,0 +1,13 @@
+context API로 아이디를 전역에서 사용할 수 있도록 한다
+-> header에서 받아온다
+
+-> axios를 통해 server에 요청을한다(해당하는 아이디만 select 되도록)
+-> 마이페이지를 누를 시 해당 아이디에 해당하는 콘서트 정보가 뜨도록 한다
+
+
+        c_user_title: concert.title,
+        c_user_region: concert.location,
+        c_user_location: concert.concert_place,
+        c_user_date: concert.concertdate,
+        c_user_start: concert.start_time,
+        c_user_num: ""
