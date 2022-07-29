@@ -60,8 +60,22 @@
 #duCk {
     font-size: 14px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 361px) and (max-width: 767px) {
     #memberJoin form table {
         width: 95%
+    }
+}
+@media screen and (max-width: 360px) {
+    #memberJoin form table {
+        width: 95%
+    }
+    #memberJoin form table td {
+        font-size: 16px;
+    }
+    #memberJoin button {
+        margin-top: 20px;
+    }
+    .daum_popup {
+        width: 200px;
     }
 }

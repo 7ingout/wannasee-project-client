@@ -1,6 +1,23 @@
-#mo_r {
-    margin-left: -7%;
+@media screen and (min-width: 361px) and (max-width: 767px) {
+     #mo_r {
+        margin-left: -7%;
+    }
+    #mo_r li {
+        margin: 0 10px
+    }
 }
-#mo_r li {
-    margin: 0 10px
+@media screen and (max-width: 360px) {
+    .Allpage h1 {
+        font-size: 42px;
+    }
+    #mo_r {
+        flex-wrap: wrap;
+        margin-left: 20px;
+        font-size: 18px;
+        width: 400px;
+    }
+    #mo_r li {
+        margin: 0 6px;
+        width: 70px;
+    }
 }

@@ -25,7 +25,7 @@ const MyPage = () => {
             <table>
                 <tbody>
                     <tr>
-                        <th colSpan={3}>
+                        <th colSpan={7}>
                             😎 {idid}님의 티켓 예매내역입니다.
                         </th>
                     </tr>

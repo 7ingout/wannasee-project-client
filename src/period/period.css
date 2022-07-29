@@ -1,4 +1,4 @@
-@media screen and (max-width:767px) {
+@media screen and (min-width: 361px) and (max-width: 767px) {
     /* 기간 페이지 구현 */
     .Allpage .period_ul #monthdiv{
         height: 80px;
@@ -15,5 +15,32 @@
     }
     #mo_p li {
         width: 150px;
+    }
+}
+@media screen and (min-width: 361px) and (max-width: 767px)  {
+    .Allpage .period_ul #monthdiv{
+        height: 80px;
+        opacity: 1;
+        padding-left: 0;
+        width: 120px;
+    }
+    .period_ul {
+        margin-top: 60px;
+        height: 180px;
+    }
+    #mo_p {
+        margin-left: 8%;
+    }
+    #mo_p li {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 360px) {
+    #memberLogin form table td {
+        padding-left: 120px;
+        padding-right: 1px;
+    }
+    #memberLogin form table td:nth-child(1) {
+        padding-bottom: 70px;
     }
 }

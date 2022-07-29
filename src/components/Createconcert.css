@@ -82,7 +82,7 @@ input::placeholder {
 #disdis {
     display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 361px) and (max-width: 767px)  {
     #create_concert form table {
         width: 90%;
     }
@@ -92,4 +92,8 @@ input::placeholder {
     #create_concert textarea {
         width: 400px
     }
+}
+@media screen and (max-width: 360px){
+    #create_concert form table {
     }
+}

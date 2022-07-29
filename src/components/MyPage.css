@@ -45,8 +45,23 @@
     padding: 2px 5px;
     cursor: pointer;
 }
-@media screen and (max-width: 767px)  {
+@media screen and (min-width: 361px) and (max-width: 767px)  {
     #Mypage form {
         width: 93%;
+    }
+}
+@media screen and (max-width: 360px) {
+    #Mypage form table th {
+        font-size: 18px;
+    }
+    #Mypage form table {
+        padding: 30px 2px;
+        font-size: 14px;
+    }
+    table td:nth-child(2), table td:nth-child(6) {
+        width: 10%;
+    }
+    table td:nth-child(7) {
+        width: 14%;
     }
 }

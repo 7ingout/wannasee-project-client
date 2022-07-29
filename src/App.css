@@ -216,7 +216,7 @@ html, body {
 }
 
 /* 반응형 구현 */
-@media screen and (max-width:767px) {
+@media screen and (min-width: 361px) and (max-width: 767px) {
   html, body {
     width: 100%;
     /* overflow-x: hidden; */
@@ -237,6 +237,38 @@ html, body {
   }
   .Allpage .all_ul li {
     margin: 0 20px;
+  }
+  .AllContent {
+    width: 43%;
+    margin-right: 3.5%;
+  }
+}
+@media screen and (max-width: 360px) {
+  html, body {
+    width: 100%;
+    /* overflow-x: hidden; */
+  }
+  /* 장르 페이지 구현 */
+  .Allpage .pageinner {
+    display: block;
+  }
+  .Allpage .all_div {
+    width: 80%;
+    padding-bottom: 80px;
+  }
+  .Allpage .all_ul {
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    display: flex;
+  }
+  .Allpage .all_ul {
+    width: 450px
+  }
+  .Allpage .all_ul li {
+    font-size: 18px;
+    margin: 0 8px;
   }
   .AllContent {
     width: 43%;

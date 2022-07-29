@@ -134,7 +134,7 @@
     font-size: 20px;
     font-weight: bold;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 361px) and (max-width: 767px) {
     #wtw {
         margin-left: 180px;
     }
@@ -176,5 +176,55 @@
         width: 700px;
         left: -20px;
         /* bottom: -50px; */
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #wtw {
+        margin-left: 5px;
+    }
+    #paragraph {
+        font-size: 16px;
+    }
+    #Cityimg {
+        width: 480px;
+    }
+    #Twiceimg {
+        top: 600px;
+        left: 30px;
+        width: 300px;
+    }
+    #IUimg {
+        display: none;
+    }
+    #third_content #third_slogan {
+        left: 3%;
+        font-size: 20px;
+    }
+    #third_content #third_slogan2 {
+        left: 3%;
+        top: 29%;
+        font-size: 15px;
+    }
+    #third_content #swiftarrow {
+        top: 36%;
+        left: 22%;
+        display: none;
+    }
+    #circle_slogan {
+        top: 240px;
+        right: 40px;
+        width: 280px
+    }
+    #playing {
+        top: 318px;
+        right: 115px;
+        padding: 40px 6px;
+        z-index: 500;
+    }
+    #WNNC {
+        width: 350px;
+        left: -20px;
+        bottom: 0px;
     }
 }

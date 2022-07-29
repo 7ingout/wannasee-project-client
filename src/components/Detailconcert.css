@@ -81,6 +81,27 @@
     font-weight: bold;
     
 }
+@media screen and (min-width: 361px) and (max-width: 767px) {
+    html, body {
+        max-width: 100%;
+        /* overflow-x: hidden; */
+    }
+    #detail_concert {
+        display: unset;
+    }
+    #detail_concert #left_detail {
+        margin-left: 200px
+    }
+    #detail_concert #left_detail #detail_img img {
+        padding-top: 60px
+    }
+    #div_description {
+        margin-top: 80px;
+    }
+    #detail_concert #right_detail #span_title {
+        font-size: 32px;
+    }
+}
 @media screen and (max-width: 360px) {
     #detail_concert {
         display: unset;
@@ -94,7 +115,6 @@
         padding-top: 20px;
         width: 60%;
     }
-
     #detail_concert #right_detail {
         margin-left: 7px
     }
