@@ -1,0 +1,19 @@
+@media screen and (max-width:767px) {
+    /* 기간 페이지 구현 */
+    .Allpage .period_ul #monthdiv{
+        height: 80px;
+        opacity: 1;
+        padding-left: 0;
+        width: 120px;
+    }
+    .period_ul {
+        margin-top: 60px;
+        height: 180px;
+    }
+    #mo_p {
+        margin-left: 3%;
+    }
+    #mo_p li {
+        width: 150px;
+    }
+}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import useAsync from '../customHook/useAsync';
 import RegionComponent from './region';
 import { API_URL } from '../config/contansts.js';
+import './region.css';
 
 const ConcertRegion = () => {
     async function getConcerts(rank_location){
@@ -21,8 +22,8 @@ const ConcertRegion = () => {
     <div className="Allpage">
         <h1>지역별</h1>
         <div className="pageinner">
-        <div id="all_div">
-            <ul id="all_ul">
+            <div className="all_div">
+                <ul id="mo_ul" className="all_ul" >
                 <li><Link to='/region'>전체보기</Link></li>
                 <li><Link to='/region/1'>서울</Link></li>
                 <li><Link to='/region/2'>부산</Link></li>
@@ -36,7 +37,7 @@ const ConcertRegion = () => {
         </div>
         <ul className='component'>
             {concerts.map(concert=>(
-                        <RegionComponent  key={concert.id} concert={concert}/>
+                        <RegionComponent key={concert.id} concert={concert}/>
             ))}
         </ul>
     </div>

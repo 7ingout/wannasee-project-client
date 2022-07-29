@@ -60,3 +60,8 @@
 #duCk {
     font-size: 14px;
 }
+@media screen and (max-width: 767px) {
+    #memberJoin form table {
+        width: 95%
+    }
+}

@@ -3,6 +3,11 @@
 li { list-style: none; }
 a { text-decoration: none; color: inherit;}
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .Allpage {
   background-color: #fff;
   font-family: 'Noto Sans KR', sans-serif;
@@ -16,7 +21,7 @@ a { text-decoration: none; color: inherit;}
 .Allpage .pageinner {
   display: flex;
 }
-.Allpage #all_div {
+.Allpage .all_div {
   width: 20%;
   text-align: left;
   font-size: 24px;
@@ -24,22 +29,22 @@ a { text-decoration: none; color: inherit;}
   z-index: 1;
   position: relative;
 }
-.Allpage #all_ul {
+.Allpage .all_ul {
   position: fixed;
   left: 120px;
   top: 50%;
   transform: translateY(-50%);
 }
-.Allpage #all_ul li{
+.Allpage .all_ul li{
   transition: 0.3s;
 }
-.Allpage #all_ul > li:hover{
+.Allpage .all_ul > li:hover{
   color: #ea4949;
 }
-.Allpage #all_ul #monthly:hover #monthdiv{
+.Allpage .all_ul #monthly:hover #monthdiv{
   color: black;
 }
-.Allpage #all_ul #monthly #monthdiv li:hover{
+.Allpage .all_ul #monthly #monthdiv li:hover{
   color: #ea4949;
 } 
 
@@ -208,4 +213,29 @@ a { text-decoration: none; color: inherit;}
 }
 .red {
   color: #ea4949;
+}
+
+/* 반응형 구현 */
+@media screen and (max-width:767px) {
+  /* 장르 페이지 구현 */
+  .Allpage .pageinner {
+    display: block;
+  }
+  .Allpage .all_div {
+    width: 100%;
+    padding-bottom: 80px;
+  }
+  .Allpage .all_ul {
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    display: flex;
+  }
+  .Allpage .all_ul li {
+    margin: 0 20px;
+  }
+  .AllContent {
+    width: 43%;
+    margin-right: 3.5%;
+  }
 }

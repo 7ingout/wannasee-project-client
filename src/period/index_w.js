@@ -4,6 +4,7 @@ import axios from 'axios';
 import useAsync from '../customHook/useAsync';
 import PeriodComponent from './period';
 import { API_URL } from '../config/contansts.js';
+import './period.css'
 
 const ConcertWeekend = () => {
     async function getConcerts(){
@@ -21,8 +22,8 @@ const ConcertWeekend = () => {
         <div className="Allpage">
             <h1>기간별</h1>
             <div className="pageinner">
-                <div id="all_div">
-                    <ul id="all_ul" className='period_ul'>
+                <div className="all_div">
+                    <ul id="mo_p" className='all_ul period_ul'>
                         <li><Link to='/period'>전체보기</Link></li>
                         <li id="monthly">
                             <Link to='/period'>월간</Link>

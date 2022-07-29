@@ -122,3 +122,11 @@ input::placeholder {
 #btns {
     padding-left: 0px;
 }
+@media screen and (max-width: 767px) {
+.ce_concert form table {
+    width: 90%;
+}
+textarea {
+    width: 400px
+}
+}

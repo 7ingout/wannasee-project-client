@@ -4,6 +4,7 @@ import axios from 'axios';
 import useAsync from '../customHook/useAsync';
 import RegionComponent from './region';
 import { API_URL } from '../config/contansts.js';
+import './region.css';
 
 async function getConcerts(){
     const response = await axios.get(`${API_URL}/region`);
@@ -19,19 +20,19 @@ const RegionPage = () => {
     if(!concerts) return <div>로딩중입니다.</div>
     return (
         <div className="Allpage">
-        <h1>장르별</h1>
+        <h1>지역별</h1>
         <div className="pageinner">
-            <div id="all_div">
-                <ul id="all_ul">
-                <li><Link to='/region'>전체보기</Link></li>
-                <li><Link to='/region/1'>서울</Link></li>
-                <li><Link to='/region/2'>부산</Link></li>
-                <li><Link to='/region/3'>대구</Link></li>
-                <li><Link to='/region/4'>인천</Link></li>
-                <li><Link to='/region/5'>광주</Link></li>
-                <li><Link to='/region/6'>대전</Link></li>
-                <li><Link to='/region/7'>울산</Link></li>
-                <li><Link to='/region/8'>기타</Link></li>
+            <div className="all_div">
+                <ul id="mo_r" className="all_ul">
+                    <li><Link to='/region'>전체보기</Link></li>
+                    <li><Link to='/region/1'>서울</Link></li>
+                    <li><Link to='/region/2'>부산</Link></li>
+                    <li><Link to='/region/3'>대구</Link></li>
+                    <li><Link to='/region/4'>인천</Link></li>
+                    <li><Link to='/region/5'>광주</Link></li>
+                    <li><Link to='/region/6'>대전</Link></li>
+                    <li><Link to='/region/7'>울산</Link></li>
+                    <li><Link to='/region/8'>기타</Link></li>
                 </ul>
                 </div>    
                 <ul className='component'>

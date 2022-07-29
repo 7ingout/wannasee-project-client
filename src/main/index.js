@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './main.css';
 import "../aos.css";
 import Marquee from "react-fast-marquee";
+import { useMediaQuery } from 'react-responsive';
 
 const MainPage = () => {
     useEffect(() => {
@@ -11,6 +12,9 @@ const MainPage = () => {
             duration : 1500
         });
     });
+    const isMobile = useMediaQuery({
+        query: "(max-width: 480px)"
+    })
     return (
         <div id="mainpage" >
             <video loop autoPlay muted>

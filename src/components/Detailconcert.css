@@ -81,3 +81,20 @@
     font-weight: bold;
     
 }
+@media screen and (max-width: 767px) {
+    #detail_concert {
+        display: unset;
+    }
+    #detail_concert #left_detail {
+        margin-left: 200px
+    }
+    #detail_concert #left_detail #detail_img img {
+        padding-top: 60px
+    }
+    #div_description {
+        margin-top: 80px;
+    }
+    #detail_concert #right_detail #span_title {
+        font-size: 32px;
+    }
+}

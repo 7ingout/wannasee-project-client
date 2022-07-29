@@ -21,8 +21,8 @@ const GenrePage = () => {
         <div className="Allpage">
             <h1>장르별</h1>
             <div className="pageinner">
-                <div id="all_div">
-                    <ul id="all_ul">
+                <div className="all_div">
+                    <ul className="all_ul">
                         <li><Link to='/genre'>전체보기</Link></li>
                         <li><Link to="/genre/발라드">발라드</Link></li>
                         <li><Link to="/genre/트로트">트로트</Link></li>

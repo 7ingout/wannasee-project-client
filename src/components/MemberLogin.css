@@ -69,3 +69,39 @@
     padding: 4px 12px;
     cursor: pointer;
 }
+
+/* 반응형 구현 */
+@media screen and (max-width:767px) {
+    /* 로그인 페이지 */
+    #memberLogin {
+      padding-top: 150px;
+    }
+    #memberLogin form {
+      width: 95%;
+    }
+    #memberLogin form table th {
+      padding: 20px 0;
+      font-size: 30px;
+    }
+    #memberLogin table {
+      line-height: 100px;
+    }
+    #memberLogin form table tr {
+      text-align: center;
+    }
+    #memberLogin form table td {
+      font-size: 22px;
+      padding-left: 80px;
+      padding-right: 50px;
+    }
+    #memberLogin input {
+      width: 220px;
+    }
+    #memberLogin form table #spans {
+      padding-right: 10px;
+    }
+    #memberLogin form table #spans span {
+      padding: 12px 25px;
+      margin-left: 20px;
+    }
+  }

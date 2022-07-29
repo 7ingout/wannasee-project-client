@@ -113,3 +113,16 @@ nav #welcome {
 #pointer {
     cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+    nav #category {
+        padding-left: 210px
+    }
+    #top_header #ticket_icon {
+        margin-left: 20px
+    }
+    #top_header .inner ul {
+        margin-right: 20px;
+        margin-top: 0px
+    }
+}

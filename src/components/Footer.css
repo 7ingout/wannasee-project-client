@@ -14,3 +14,8 @@
 #footer div {
     margin-left: 20px;
 }
+@media screen and (max-width: 767px) {
+    #footer {
+    padding-left: 10%;
+}
+}
