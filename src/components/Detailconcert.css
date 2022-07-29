@@ -81,24 +81,30 @@
     font-weight: bold;
     
 }
-@media screen and (max-width: 767px) {
-    html, body {
-        max-width: 100%;
-        /* overflow-x: hidden; */
-    }
+@media screen and (max-width: 360px) {
     #detail_concert {
         display: unset;
+        display: block;
+        width: 450px;
     }
     #detail_concert #left_detail {
-        margin-left: 200px
+        margin-left: 0px
     }
     #detail_concert #left_detail #detail_img img {
-        padding-top: 60px
+        padding-top: 20px;
+        width: 60%;
     }
-    #div_description {
-        margin-top: 80px;
+
+    #detail_concert #right_detail {
+        margin-left: 7px
     }
     #detail_concert #right_detail #span_title {
-        font-size: 32px;
+        font-size: 20px;
+    }
+    #div_description {
+        margin-top: 200px;
+    }
+    #gopurchace #outerpur button {
+        width: 225px;
     }
 }
