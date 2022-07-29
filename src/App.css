@@ -216,7 +216,7 @@ html, body {
 }
 
 /* 반응형 구현 */
-@media screen and (max-width:767px) {
+@media screen and (max-width:480px) {
   /* 장르 페이지 구현 */
   .Allpage .pageinner {
     display: block;
