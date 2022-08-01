@@ -274,4 +274,24 @@ html, body {
     width: 43%;
     margin-right: 3.5%;
   }
+  #small_detail {
+    width: 70%;
+  }
+  #godetail {
+    margin-left: 15px;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  #small_ticket_icon img {
+    width: 80%;
+    padding-top: 5px;
+    padding-left: 2px;
+    margin-left: 5px;
+  }
+  .AllContent .span_title {
+    font-size: 18px;
+  }
+  .AllContent {
+    height: 400px;
+  }
 }

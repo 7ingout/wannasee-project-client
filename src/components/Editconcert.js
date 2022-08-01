@@ -182,12 +182,12 @@ const Editconcert = () => {
                             <input name="c_concert_place" type="text" value={formData.c_concert_place} onChange={onChange}/>
                             </td>
                         </tr>
-                        <tr>
+                        {/* <tr>
                             <td>장소</td>
                             <td>
                             <input name="c_concert_place" type="text" value={formData.c_concert_place} onChange={onChange}/>
                             </td>
-                        </tr>
+                        </tr> */}
                         <tr>
                             <td>가격</td>
                             <td>

@@ -212,12 +212,12 @@
         display: none;
     }
     #circle_slogan {
-        top: 240px;
+        top: 300px;
         right: 40px;
         width: 280px
     }
     #playing {
-        top: 318px;
+        top: 376px;
         right: 115px;
         padding: 40px 6px;
         z-index: 500;
