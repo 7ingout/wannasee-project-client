@@ -67,4 +67,7 @@
     table td:nth-child(7) {
         width: 14.5%;
     }
+    #noreserve {
+        padding-left: 10px;
+    }
 }
