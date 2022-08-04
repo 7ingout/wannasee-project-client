@@ -60,9 +60,30 @@
 #duCk {
     font-size: 14px;
 }
+.postCode_btn {
+    position: absolute;
+    top: 24.5%;
+    left: 61.5%;
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    border: none;
+    cursor: pointer;
+}
 @media screen and (min-width: 361px) and (max-width: 767px) {
     #memberJoin form table {
         width: 95%
+    }
+    .postCode_btn {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 26px;
+        line-height: 26px;
+        border: none;
+        cursor: pointer;
     }
 }
 @media screen and (max-width: 360px) {
@@ -75,7 +96,14 @@
     #memberJoin button {
         margin-top: 20px;
     }
-    .daum_popup {
-        width: 200px;
+    .postCode_btn {
+        position: absolute;
+        top: 13%;
+        left: 135px;
+        width: 80px;
+        height: 26px;
+        line-height: 26px;
+        border: none;
+        cursor: pointer;
     }
 }
