@@ -89,7 +89,6 @@ const Detailconcert = () => {
     if(!concert) return null;
     return (
         <div>
-
             <div id="detail_concert">
                 <div id='btns'>
                 {idid === 'admin' ?  <button><Link to={`/editConcert/${id}`}>수정</Link></button> : ''} 

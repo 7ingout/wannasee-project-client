@@ -7,7 +7,6 @@ import PopupDom from "./PopupDom"
 import PopupPostCode from "./PopupPostCode"
 
 const MemberJoin = () => {
-   
     const navigate = useNavigate(); // 리다이렉션
      // 우편번호 관리하기
      const onAddData = (data) => {
