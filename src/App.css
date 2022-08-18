@@ -3,10 +3,10 @@
 li { list-style: none; }
 a { text-decoration: none; color: inherit;}
 
-html, body {
+/* html, body {
   max-width: 100%;
   overflow-x: hidden;
-}
+} */
 
 .Allpage {
   background-color: #fff;
@@ -219,7 +219,7 @@ html, body {
 @media screen and (min-width: 361px) and (max-width: 767px) {
   html, body {
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
   /* 장르 페이지 구현 */
   .Allpage .pageinner {
@@ -243,10 +243,11 @@ html, body {
     margin-right: 3.5%;
   }
 }
+
 @media screen and (max-width: 360px) {
   html, body {
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
   /* 장르 페이지 구현 */
   .Allpage .pageinner {
