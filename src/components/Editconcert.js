@@ -82,14 +82,24 @@ const Editconcert = () => {
             alert("수정이 취소되었습니다");
         }   
     }
+    // 08-19 이미지 부분 추가 수정
     const onChangeImg = (e) => {
-        const file = e.target.files[0];
-        const imgsrc = "image/"+file.name;
-        setFormData({
-            ...formData,
-            c_imgsrc: imgsrc
+        const { name } = e.target;
+        const imgFormData = new FormData();
+        imgFormData.append(name, e.target.files[0]);
+        axios.post(`${API_URL}/upload`, imgFormData, {
+            Headers: {'content-type':'multipart/form-data'},
+        }).then (response=>{
+            // setUploadImg(response.data.imageUrl);
+            setFormData({
+                ...formData,
+                c_imgsrc: response.data.c_imgsrc,
+            })
+        }).catch(e=>{
+            console.log(e)
         })
     }
+    //
     function updateConcert(){
         axios.put(`${API_URL}/editConcert/${id}`,formData)
         .then((result)=>{
@@ -100,7 +110,7 @@ const Editconcert = () => {
             console.log(e);
         })
     }
-    const imgname = formData.c_imgsrc.split('/')[1];
+    // const imgname = formData.c_imgsrc.split('/')[1];
 
     if(loading) return <div className="spinner_bg"><div className="spinner"><div className="cube1"></div><div className="cube2"></div></div></div>
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>
@@ -118,13 +128,18 @@ const Editconcert = () => {
                         </tr>
                         <tr>
                             <td>이미지등록</td>
-                            <td id='imgimgimg'>
-                                <img src={`../${formData.c_imgsrc}`} alt="imgimg"/>
-                                <p id="fff">    
-                                    <span id='fakebox'>파일 선택 </span> 
-                                    <span id='fake'>{imgname}</span>
-                                    <input id='real' name="c_imgsrc" type="file" onChange={onChangeImg}/>
-                                </p>
+                            <td>
+                                <div className='imgDiv'>
+                                    <div className='imgBox'>
+                                        <div className='addimg'>
+                                            {/* <img src='/addimg.png' alt='addimg'/> */}
+                                        </div>
+                                    </div>
+                                    <input type="file" id='imgInput' name="c_imgsrc" onChange={onChangeImg}/>
+                                        {
+                                            formData.c_imgsrc && <img src={`${API_URL}/upload/${formData.c_imgsrc}`} alt="" className='imgview'/>
+                                    }
+                                </div>
                             </td>
                         </tr>
                         <tr>

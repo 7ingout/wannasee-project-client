@@ -20,14 +20,34 @@ const Createconcert = () => {
         c_description: "",
         c_concert_place: "",
     })
+    // const onChangeImg = (e) => {
+    //     const file = e.target.files[0];
+    //     const imgsrc = "image/"+file.name;
+    //     setFormData({
+    //         ...formData,
+    //         c_imgsrc: imgsrc
+    //     })
+    // }
+    
+
+    // 08-19 이미지 부분 추가 수정
     const onChangeImg = (e) => {
-        const file = e.target.files[0];
-        const imgsrc = "image/"+file.name;
-        setFormData({
-            ...formData,
-            c_imgsrc: imgsrc
+        const { name } = e.target;
+        const imgFormData = new FormData();
+        imgFormData.append(name, e.target.files[0]);
+        axios.post(`${API_URL}/upload`, imgFormData, {
+            Headers: {'content-type':'multipart/form-data'},
+        }).then (response=>{
+            // setUploadImg(response.data.imageUrl);
+            setFormData({
+                ...formData,
+                c_imgsrc: response.data.c_imgsrc,
+            })
+        }).catch(e=>{
+            console.log(e)
         })
     }
+    //
     const onChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -75,14 +95,14 @@ const Createconcert = () => {
             console.log(e);
         })
     }
-    function imgopen() {
-        let dis = document.querySelector('#disdis');
-        setTimeout(() => {
-            dis.style.display = "block";
-        }, 1000);
-    }
+    // function imgopen() {
+    //     let dis = document.querySelector('#disdis');
+    //     setTimeout(() => {
+    //         dis.style.display = "block";
+    //     }, 1000);
+    // }
     return (
-        <div id="create_concert">
+        <div className="create_concert">
             <form onSubmit={onSubmit}> 
             <table>
                 <tbody>
@@ -93,9 +113,22 @@ const Createconcert = () => {
                         </tr>
                         <tr>
                             <td>이미지등록</td>
-                            <td id='imgimgimg'>
+                            {/* <td id='imgimgimg'>
                                 <img id='disdis' src={`../${formData.c_imgsrc}`} alt='imgimg'/>
                                 <input onClick={imgopen} name="c_imgsrc" type="file" onChange={onChangeImg}/>
+                            </td> */}
+                             <td>
+                                <div className='imgDiv'>
+                                    <div className='imgBox'>
+                                        <div className='addimg'>
+                                            <img src='/addimg.png' alt='addimg'/>
+                                        </div>
+                                    </div>
+                                    <input type="file" id='imgInput' name="c_imgsrc" onChange={onChangeImg}/>
+                                        {
+                                            formData.c_imgsrc && <img src={`${API_URL}/upload/${formData.c_imgsrc}`} alt="" className='imgview'/>
+                                    }
+                                </div>
                             </td>
                         </tr>
                         <tr>

@@ -95,8 +95,8 @@ const Detailconcert = () => {
                 {idid === 'admin' ?  <button onClick={onDelete}>삭제</button> : ''} 
                 </div>
                 <div id="left_detail">
-                    
-                    <div id="detail_img"><img src={`../${concert.imgsrc}`} alt="singer_pic" /></div>
+                    <div id="detail_img"> <img src = {`${API_URL}/upload/${concert.imgsrc}`} alt="img" /></div>
+                    {/* <div ><img src={`../${concert.imgsrc}`} alt="singer_pic" /></div> */}
                 </div>
                 <div id="right_detail">
                     <span id="span_title">{concert.title}</span>

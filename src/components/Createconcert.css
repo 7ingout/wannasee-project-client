@@ -1,14 +1,14 @@
-#create_concert {
+.create_concert {
     height: 1400px;
     background-color:#FEBF63;
     padding-top: 60px;
 }
-#create_concert form{
+.create_concert form{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
 }
-#create_concert form table {
+.create_concert form table {
     background-color: white;
     width: 100%;
     max-width: 800px;
@@ -17,24 +17,24 @@
     font-size: 16px;
     padding-bottom: 80px;
 }
-#create_concert form table th{
+.create_concert form table th{
     padding: 30px 0;
     font-size: 24px;
 }
-#create_concert form table td {
+.create_concert form table td {
     padding-left: 60px;
     height: 40px;
     font-size: 18px;
     font-weight: bold;
 }
 
-#create_concert textarea {
+.create_concert textarea {
     width: 500px;
     height: 200px;
     padding: 3px;
     resize: none;
 }
-#create_concert input {
+.create_concert input {
     width: 350px;
     height: 40px;
     margin-right: 10px;
@@ -43,12 +43,12 @@
     padding: 3px;
     border-bottom: 5px solid #FEBF63;
 }
-#create_concert #imgimgimg input {
+.create_concert #imgimgimg input {
     border: none;
     width: 350px;
     height: 40px;
 }
-#create_concert .radios input{
+.create_concert .radios input{
     width: 13px;
     height: 13px;
 }
@@ -59,14 +59,14 @@ input, textarea {
 #con_desc {
     height: 280px;
 }
-#create_concert #brntr {
+.create_concert #brntr {
     text-align: center;
 }
-#create_concert #btntr #btns {
+.create_concert #btntr #btns {
     text-align: center;
     padding-left: 0px
 }
-#create_concert button {
+.create_concert button {
     color: #fff;
     background-color: black;
     font-weight: bold;
@@ -83,59 +83,98 @@ input::placeholder {
     display: none;
 }
 @media screen and (min-width: 361px) and (max-width: 767px)  {
-    #create_concert form table {
+    .create_concert form table {
         width: 95%;
     }
-    #create_concert form table td {
+    .create_concert form table td {
         padding-left: 45px;
     }
-    #create_concert textarea {
+    .create_concert textarea {
         width: 400px
     }
 }
 @media screen and (max-width: 360px){
-    #create_concert form {
+    .create_concert form {
         width: 340px;
     }
-    #create_concert form table {
+    .create_concert form table {
         display: block;
         max-width: 340px;
     }
-    #create_concert form table th {
+    .create_concert form table th {
         text-align: left;
         padding-left: 45px;
     }
-    #create_concert form table tr td:first-child {
+    .create_concert form table tr td:first-child {
         padding-left: 5px;
         width: 80px;
         font-size: 14px;
         display: block;
         padding-top: 18px;
     }
-    #create_concert form table tr td:nth-child(2) {
+    .create_concert form table tr td:nth-child(2) {
         padding-left: 5px;
         font-size: 14px;
         width: 400px;
     }
-    #create_concert input {
+    .create_concert input {
         width: 200px;
         /* margin-bottom: 50px; */
     }
-    #create_concert textarea {
+    .create_concert textarea {
         height: 150px;
         width: 200px;
         margin-top: -80px;
     }
-    #create_concert #btntr #btns {
+    .create_concert #btntr #btns {
         margin-top: -50px;
     }
-    #create_concert #btntr #btns button:nth-child(1) {
+    .create_concert #btntr #btns button:nth-child(1) {
         position: absolute;
         display: block;
         left: 90px;
     }
-    #create_concert #btntr #btns button:nth-child(2) {
+    .create_concert #btntr #btns button:nth-child(2) {
         position: absolute;
         left: 180px
     }
+}
+
+
+/* 이미지부분추가 */
+.imgDiv {
+    margin: 15px 0;
+    position: relative;
+}
+.imgBox {
+    width: 400px;
+    height: 250px;
+    /* background-color: darkseagreen; */
+    border: 1px solid #ccc;
+    position: relative;
+}
+.imgBox .addimg {
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.imgBox .addimg img {
+    width: 100%;
+}
+#imgInput {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.imgview {
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
