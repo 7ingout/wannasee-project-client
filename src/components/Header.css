@@ -201,6 +201,7 @@ nav #welcome {
         display: flex;
         justify-content: center;
         align-items: center;  
+        text-align: center;
     }
     nav #category li{
         width: 80px;
@@ -239,7 +240,7 @@ nav #welcome {
         position: absolute;
         display: block;
         content: "";
-        left: -3px;
+        left: 1px;
         top: 8px;
         width: 78px;
         height: 24px;
