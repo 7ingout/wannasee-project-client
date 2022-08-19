@@ -28,7 +28,7 @@ const Createconcert = () => {
     //         c_imgsrc: imgsrc
     //     })
     // }
-    
+   
 
     // 08-19 이미지 부분 추가 수정
     const onChangeImg = (e) => {
@@ -72,7 +72,7 @@ const Createconcert = () => {
             // 입력이 다되어있으면 post전송
             else if(formData.c_title !== "" && formData.c_singer !== "" &&
             formData.c_genre !== "" && formData.c_location !== "" &&
-            formData.c_price !== "" && formData.c_concertdate !== "" && 
+            formData.c_price !== "" && formData.c_concertdate !== "" &&
             formData.c_start_time !== "" && formData.c_end_time !== "" &&
             formData.c_description !== "" && formData.c_concert_place !== "" &&
             formData.c_rank_location !== ""){
@@ -103,7 +103,7 @@ const Createconcert = () => {
     // }
     return (
         <div className="create_concert">
-            <form onSubmit={onSubmit}> 
+            <form onSubmit={onSubmit}>
             <table>
                 <tbody>
                         <tr>
@@ -178,7 +178,8 @@ const Createconcert = () => {
                             <td>지역2</td>
                             <td>
                                 <input name="c_rank_location" type="text" value={formData.c_rank_location} onChange={onChange}
-                                placeholder="서울:1 / 부산:2 / 대구:3 / 인천:4 / 광주:5 / 대전:6 / 울산:7 / 기타:8 "/>
+                                />
+                                <span id="re_span">서울:1 / 부산:2 / 대구:3 / 인천:4 / 광주:5 / 대전:6 / 울산:7 / 기타:8</span>
                             </td>
                         </tr>
                         <tr>

@@ -122,7 +122,7 @@ input::placeholder {
 #btns {
     padding-left: 0px;
 }
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
 .ce_concert form table {
     width: 90%;
 }
@@ -158,7 +158,7 @@ textarea {
     }
     .ce_concert input {
         width: 200px;
-        /* margin-bottom: 50px; */
+        margin-bottom: 50px;
     }
     .ce_concert textarea {
         height: 150px;
@@ -177,7 +177,7 @@ textarea {
         position: absolute;
         left: 180px
     }
-}
+} */
 
 
 /* 이미지부분추가 */
@@ -217,4 +217,50 @@ textarea {
     position: absolute;
     left: 0;
     top: 0;
+}
+@media screen and (min-width: 320px) and (max-width:479px) {
+    .ce_concert form {
+        max-width: 310px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .ce_concert form table th {
+        font-size: 20px;
+    }
+    .ce_concert form table td {
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .ce_concert form table td .radios {
+        font-size: 12px;
+    }
+    .ce_concert form .radios input {
+        width: 9px;
+        height: 10px;
+    }
+    .ce_concert form .imgBox {
+        max-width: 200px;
+        width: 100%;
+        height: 200px;
+
+    }
+    .ce_concert form input {
+        width: 200px;
+    }
+    .ce_concert form textarea {
+        width: 200px;
+    }
+    .ce_concert form .imgDiv {
+        max-width: 200px;
+        width: 100%;
+        height: 220px;
+    }
+    .ce_concert form #imgInput {
+        width: 100%;
+        height: 220px;
+    }
+    .ce_concert form .imgview {
+        width: 100%;
+        height: 220px;
+    }
 }

@@ -16,6 +16,7 @@
     margin-left: 280px;
 }
 #paragraph {
+    font-family: 'Noto Sans KR', sans-serif;
     margin-top: 40px;
     font-size: 20px;
     line-height: 1.5;
@@ -89,7 +90,8 @@
     width: 400px;
     top: 200px;
     right: 300px;
-    animation: rotate_image 10s linear infinite;transform-origin: 50% 50%;
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
 }
 #circle_slogan img {
     width: 100%;
@@ -134,7 +136,7 @@
     font-size: 20px;
     font-weight: bold;
 }
-@media screen and (min-width: 361px) and (max-width: 767px) {
+/* @media screen and (min-width: 361px) and (max-width: 767px) {
     #wtw {
         margin-left: 180px;
     }
@@ -174,12 +176,12 @@
     }
     #WNNC {
         width: 700px;
-        left: -20px;
+        left: -20px; */
         /* bottom: -50px; */
-    }
-}
+    /* }
+} */
 
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
     #wtw {
         margin-left: 5px;
     }
@@ -227,4 +229,92 @@
         left: -20px;
         bottom: 0px;
     }
-}
+} */
+
+@media all and (min-width:320px) and (max-width:479px) { 
+    #second_content {
+        height: 760px;
+    }
+    #wtw {
+        padding-top: 120px;
+        margin-left: 10px;
+        font-size: 38px;
+    }
+    #paragraph {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 14px;
+    }
+    #Cityimg {
+        display: none;
+    }
+    #Twiceimg {
+        display: none;
+    }
+    #IUimg {
+        top: 440px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 340px;
+    }
+    #third_content {
+        width: 100%;
+        height: 800px;
+        position: relative;
+    }
+    #third_content #third_slogan {
+        font-size: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        width: max-content;
+        top: 180px;
+    }
+    #third_content #third_slogan2 {
+        left: 50%;
+        transform: translate(-50%);
+        top: 220px;
+        font-size: 14px;
+        width:max-content;
+    }
+    #third_content #swiftarrow {
+        display: none;
+    }
+
+    .mo_circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #circle_slogan {
+        top: 300px;
+        right: unset;
+        width: 280px;
+    }
+    #playing {
+        top: 378px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px;
+        width: 130px;
+        height: 130px;
+        line-height: 45px;
+        z-index: 500;
+        font-size: 14px;
+    }
+    #playing #upspan {
+        display: none;
+    }
+    #WNNC {
+        width: 350px;
+        left: -20px;
+        bottom: 0px;
+    }
+    .marquee-container {
+        background-color: black;
+        color: white;
+        padding: 5px 0;
+        display: none;
+        margin-top: -5px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+  }

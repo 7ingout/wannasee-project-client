@@ -27,7 +27,7 @@ const Header = () => {
                     <div id="ticket_icon"><img src='/concert.png' alt="ticket"/></div>
                     <h1><Link to ='/'>WANNASEE?</Link></h1>
                     <ul>
-                        {idid === null ? <li><Link to="/login">login</Link></li> : <>{ idid == 'admin' ? <li id="pointer" onClick={()=>{goHome(); Logout();}}>logout</li> : <><li> Welcome {idid} 🎈</li><li id="pointer" onClick={()=>{goHome(); Logout();}}>logout</li></>}</>} 
+                        {idid === null ? <li><Link to="/login">login</Link></li> : <>{ idid === 'admin' ? <li id="pointer" onClick={()=>{goHome(); Logout();}}>logout</li> : <><li> Welcome {idid} 🎈</li><li id="pointer" onClick={()=>{goHome(); Logout();}}>logout</li></>}</>} 
                         {idid === null ? <li><Link to="/join">join</Link></li> : ''}    
                         {idid === null ? '' :  <li><Link to={`/mypage/${idid}`}>mypage</Link></li>} 
                         {idid === 'admin' ? <li><Link to="/insert">insert</Link></li> : ''} 

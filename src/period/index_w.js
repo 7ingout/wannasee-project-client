@@ -17,7 +17,7 @@ const ConcertWeekend = () => {
     if(loading) 
     return <div className="spinner_bg"><div className="spinner"><div className="cube1"></div><div className="cube2"></div></div></div>
     if(error) return <div>에러가 발생했습니다.</div>
-    if(!concerts) return <div>로딩중입니다.</div>
+    if(!concerts) return null;
     return (
         <div className="Allpage">
             <h1>기간별</h1>

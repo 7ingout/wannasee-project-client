@@ -1,43 +1,210 @@
 #memberLogin {
-    height: 820px;
-    background-color:#FEBF63;
-    padding-top: 220px;
+  height: 820px;
+  background-color:#FEBF63;
+  padding-top: 220px;
 }
 #memberLogin form{
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 #memberLogin form table{
-    background-color: white;
+  background-color: white;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 25px;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+#memberLogin form table th{
+  padding: 30px 0;
+  font-size: 24px;
+}
+#memberLogin form table td{
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 240px;
+}
+#memberLogin input {
+  width: 180px;
+  height: 25px;
+  outline: none;
+  border: none;
+  padding: 3px;
+  border-bottom: 5px solid #FEBF63;
+  margin-left: -350px;
+  margin-bottom: 0px;
+}
+#memberLogin #btns button {
+  color: #fff;
+  background-color: black;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 40px;
+  width: 90px;
+  height: 30px;
+  margin: 0 5px;
+}
+#memberLogin form table #spans {
+  padding-left: 0px;
+  text-align: center;
+}
+#spans #span_login {
+  color: #fff;
+  background-color: black;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 5px;
+  padding: 4px 20px;
+  cursor: pointer;
+}
+#spans #span_logout {
+  color: #fff;
+  background-color: black;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 5px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+/* 반응형 구현
+@media screen and (min-width: 361px) and (max-width: 767px) {
+/* 로그인 페이지 */
+/* #memberLogin {
+  padding-top: 150px;
+}
+#memberLogin form {
+  width: 95%;
+}
+#memberLogin form table th {
+  padding: 20px 0;
+  font-size: 30px;
+}
+#memberLogin table {
+  line-height: 100px;
+}
+#memberLogin form table tr {
+  text-align: center;
+}
+#memberLogin form table td {
+  font-size: 22px;
+  padding-left: 80px;
+  padding-right: 50px;
+}
+#memberLogin input {
+  width: 220px;
+}
+#memberLogin form table #spans {
+  padding-right: 10px;
+}
+#memberLogin form table #spans span {
+  padding: 12px 25px;
+  margin-left: 20px;
+}
+} */
+
+/* 반응형 구현 */
+/* @media screen and (max-width: 360px) { */
+/* 로그인 페이지 */
+/* #memberLogin {
+  padding-top: 150px;
+}
+#memberLogin form {
+  width: 95%;
+}
+#memberLogin form table th {
+  padding: 20px 0;
+  font-size: 30px;
+}
+#memberLogin table {
+  line-height: 100px;
+}
+#memberLogin form table tr {
+  text-align: center;
+}
+#memberLogin form table td {
+  font-size: 22px;
+  padding-left: 80px;
+  padding-right: 50px;
+}
+#memberLogin input {
+  width: 220px;
+  text-align: center;
+}
+#memberLogin form table #spans {
+  padding-right: 10px;
+}
+#memberLogin form table #spans span {
+  padding: 12px 25px;
+  margin-left: 20px;
+}
+#memberLogin {
+  height: 800px;
+  background-color:#FEBF63;
+  padding-top: 50px;
+}
+#memberLogin form{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#memberLogin form table{
+  background-color: white;
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 25px;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+} */
+
+@media screen and (min-width: 320px) and (max-width:479px) {
+  #memberLogin {
+    /* height: 820px;
+    background-color:#FEBF63; */
+    padding-top: 30%;
+  }
+  #memberLogin form {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 310px;
+    /* margin: 0 auto; */
+  }
+  #memberLogin form table{
+    /* background-color: white; */
+    width: 100%;
+    max-width: 310px;
+    /* margin: 0 auto; */
     border-radius: 25px;
     font-size: 16px;
     padding-bottom: 20px;
-}
-#memberLogin form table th{
+  }
+  #memberLogin form table th{
     padding: 30px 0;
     font-size: 24px;
-}
-#memberLogin form table td{
+  }
+  #memberLogin form table td{
     height: 60px;
     font-size: 18px;
     font-weight: bold;
-    padding-left: 240px;
-}
-#memberLogin input {
+    padding-left: 20px;
+  }
+  #memberLogin input {
     width: 180px;
+    /* max-width: 200px; */
     height: 25px;
     outline: none;
     border: none;
     padding: 3px;
     border-bottom: 5px solid #FEBF63;
-    margin-left: -350px;
+    margin-left: 0px;
+    margin-right: 10px;
     margin-bottom: 0px;
-}
-#memberLogin #btns button {
+  }
+  #memberLogin #btns button {
     color: #fff;
     background-color: black;
     font-weight: bold;
@@ -46,12 +213,12 @@
     width: 90px;
     height: 30px;
     margin: 0 5px;
-}
-#memberLogin form table #spans {
+  }
+  #memberLogin form table #spans {
     padding-left: 0px;
     text-align: center;
-}
-#spans #span_login {
+  }
+  #spans #span_login {
     color: #fff;
     background-color: black;
     font-weight: bold;
@@ -59,8 +226,8 @@
     margin: 0 5px;
     padding: 4px 20px;
     cursor: pointer;
-}
-#spans #span_logout {
+  }
+  #spans #span_logout {
     color: #fff;
     background-color: black;
     font-weight: bold;
@@ -68,96 +235,5 @@
     margin: 0 5px;
     padding: 4px 12px;
     cursor: pointer;
-}
-
-/* 반응형 구현 */
-@media screen and (min-width: 361px) and (max-width: 767px) {
-  /* 로그인 페이지 */
-  #memberLogin {
-    padding-top: 150px;
   }
-  #memberLogin form {
-    width: 95%;
-  }
-  #memberLogin form table th {
-    padding: 20px 0;
-    font-size: 30px;
-  }
-  #memberLogin table {
-    line-height: 100px;
-  }
-  #memberLogin form table tr {
-    text-align: center;
-  }
-  #memberLogin form table td {
-    font-size: 22px;
-    padding-left: 80px;
-    padding-right: 50px;
-  }
-  #memberLogin input {
-    width: 220px;
-  }
-  #memberLogin form table #spans {
-    padding-right: 10px;
-  }
-  #memberLogin form table #spans span {
-    padding: 12px 25px;
-    margin-left: 20px;
-  }
-}
-
-/* 반응형 구현 */
-@media screen and (max-width: 360px) {
-  /* 로그인 페이지 */
-  #memberLogin {
-    padding-top: 150px;
-  }
-  #memberLogin form {
-    width: 95%;
-  }
-  #memberLogin form table th {
-    padding: 20px 0;
-    font-size: 30px;
-  }
-  #memberLogin table {
-    line-height: 100px;
-  }
-  #memberLogin form table tr {
-    text-align: center;
-  }
-  #memberLogin form table td {
-    font-size: 22px;
-    padding-left: 80px;
-    padding-right: 50px;
-  }
-  #memberLogin input {
-    width: 220px;
-    text-align: center;
-  }
-  #memberLogin form table #spans {
-    padding-right: 10px;
-  }
-  #memberLogin form table #spans span {
-    padding: 12px 25px;
-    margin-left: 20px;
-  }
-  #memberLogin {
-    height: 800px;
-    background-color:#FEBF63;
-    padding-top: 50px;
-}
-#memberLogin form{
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-#memberLogin form table{
-    background-color: white;
-    width: 95%;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 25px;
-    font-size: 16px;
-    padding-bottom: 20px;
-}
 }

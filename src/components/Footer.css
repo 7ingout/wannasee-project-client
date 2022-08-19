@@ -14,7 +14,7 @@
 #footer div {
     margin-left: 20px;
 }
-@media screen and (min-width: 361px) and (max-width: 767px) {
+/* @media screen and (min-width: 361px) and (max-width: 767px) {
     #footer {
     padding-left: 10%;
 }
@@ -27,5 +27,22 @@
     #footer div {
         margin-top: 10px;
         margin-left: 2px
+    }
+} */
+
+@media all and (min-width:320px) and (max-width:479px) {
+    #footer {
+        padding-left: 1%;
+        font-size: 8px;
+        height: 20px;
+        padding-top: 12px;
+    }
+    #footer h1 {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    #footer div {
+        margin-top: 3px;
+        margin-left: 10px
     }
 }

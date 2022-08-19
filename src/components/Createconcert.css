@@ -82,7 +82,7 @@ input::placeholder {
 #disdis {
     display: none;
 }
-@media screen and (min-width: 361px) and (max-width: 767px)  {
+/* @media screen and (min-width: 361px) and (max-width: 767px)  {
     .create_concert form table {
         width: 95%;
     }
@@ -120,7 +120,7 @@ input::placeholder {
     .create_concert input {
         width: 200px;
         /* margin-bottom: 50px; */
-    }
+    /* }
     .create_concert textarea {
         height: 150px;
         width: 200px;
@@ -138,7 +138,7 @@ input::placeholder {
         position: absolute;
         left: 180px
     }
-}
+} */
 
 
 /* 이미지부분추가 */
@@ -177,4 +177,64 @@ input::placeholder {
     position: absolute;
     left: 0;
     top: 0;
+}
+#re_span {
+    font-size: 12px;
+    display: block;
+    width: 400px;
+    font-weight: normal;
+    /* background-color: tomato; */
+}
+@media screen and (min-width: 320px) and (max-width:479px) {
+    .create_concert form {
+        max-width: 310px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .create_concert form table th {
+        font-size: 20px;
+    }
+    .create_concert form table td {
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .create_concert form table td .radios {
+        font-size: 12px;
+    }
+    .create_concert .radios input {
+        width: 9px;
+        height: 10px;
+    }
+    .create_concert form .imgBox {
+        max-width: 200px;
+        width: 100%;
+        height: 200px;
+
+    }
+    .create_concert input {
+        width: 200px;
+    }
+    .create_concert textarea {
+        width: 200px;
+    }
+    .create_concert .imgDiv {
+        max-width: 200px;
+        width: 100%;
+        height: 220px;
+    }
+    .create_concert #imgInput {
+        width: 100%;
+        height: 220px;
+    }
+    .create_concert .imgview {
+        width: 100%;
+        height: 220px;
+    }
+    #re_span {
+        font-size: 8px;
+        display: block;
+        width: 200px;
+        font-weight: normal;
+        /* background-color: tomato; */
+    }
 }
