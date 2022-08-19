@@ -157,7 +157,7 @@ const MemberJoin = () => {
                 // eslint-disable-next-line
             let regPass = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/;
             if (regPass.test(text) === false) {
-                alert('비밀번호 형식이 아닙니다.')
+                alert('비밀번호는 영문/숫자 조합으로 8-20자리 입력해주세요.')
             }else {
                 setPassCheck(true);
                 if(userPw.value !== userPwCh.value) {
@@ -174,7 +174,7 @@ const MemberJoin = () => {
                         } else if(!mailCk) {
                             alert('이메일 형식을 확인해주세요')
                         } else if(!psCh) {
-                            alert('비밀번호 형식을 확인해주세요')
+                            alert('비밀번호는 영문/숫자 조합으로 8-20자리 입력해주세요.')
                         }
                     }
                     else {
