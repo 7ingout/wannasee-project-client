@@ -219,7 +219,8 @@ const MemberJoin = () => {
                         <tr>
                             <td>비밀번호</td>
                             <td>
-                                <input type="password" id="password" name="password" value={formData.password} onChange={onChange}/>
+                                <input type="password" id="password" name="password" value={formData.password} onChange={onChange}
+                                placeholder='영문/숫자 조합으로 8-20자리 입력'/>
                             </td>
                         </tr>
                         <tr>
